@@ -31,7 +31,7 @@ angular
   })
   .service('client', function (esFactory) {
     return esFactory({
-      host: 'http://localhost:9200',
+      host: 'http://frontinbh.com.br:9200',
       log: 'trace'
     });
   })
