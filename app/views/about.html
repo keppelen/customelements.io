@@ -1,0 +1,51 @@
+<div class="wrapper view-details">
+  <ul class="social-buttons">
+    <li class="tweet-btn">
+      <twitter-button type="share" href="{{ element.url }}" height="20" width="100" text="{{ element.description }}"></twitter-button>
+    </li>
+    <li class="fb-btn">
+      <facebook-button href="{{ element.url }}" layout="button_count" height="20" width="90"></facebook-button>
+    </li>
+    <li class="gplus-btn">
+      <gplus-one size="medium" href="{{ element.url }}"></gplus-one>
+    </li>
+    <li class="gh-btn">
+      <github-button height="20" user="{{ element.owner }}" repo="{{ element.name }}"></github-button>
+    </li>
+  </ul>
+
+
+  <article class="user spinner">
+    <dl class="user-data">
+      <dt>Avatar:</dt>
+      <dd class="user-avatar">
+        <img ng-src="{{ user.avatar_url }}">
+      </dd>
+
+      <dt>Fullname:</dt>
+      <dd class="user-name">{{ user.name }}</dd>
+
+      <dt>Account:</dt>
+      <dd class="user-account">{{ user.login }}</dd>
+    </dl>
+    <dl class="user-stats">
+      <dt>Repos</dt>
+      <dd class="user-repos" data-stats="repos">{{ user.public_repos }}</dd>
+
+      <dt>Followers</dt>
+      <dd class="user-followers" data-stats="followers">{{ user.followers }}</dd>
+    </dl>
+  </article>
+
+
+  <section class="desc-element">
+    <h2 class="title">{{ element.name }}</h2>
+    <br>
+
+    <p><strong>Description</strong>: {{ element.description }}</p>
+    <p><strong>stars</strong>: {{ element.stars }}</p>
+    <p><strong>Forks</strong>: {{ element.forks }}</p>
+    <p><a class="button load-more large" href="{{ element.url }}" target="_blank">See on GitHub</a></p>
+  </section>
+
+</div>

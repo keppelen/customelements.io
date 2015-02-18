@@ -1,4 +1,6 @@
 node_modules
-.bowerrc
+dist
+.tmp
+.sass-cache
+bower_components
 .DS_Store
-.gh.json

@@ -33,5 +33,6 @@
   },
   "_source": "git://github.com/janantala/love-heart.git",
   "_target": "~0.3.0",
-  "_originalSource": "love-heart"
+  "_originalSource": "love-heart",
+  "_direct": true
 }

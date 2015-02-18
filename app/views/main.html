@@ -1,0 +1,79 @@
+<main class="content">
+  <!-- Social -->
+  <ul class="social-buttons">
+    <li class="tweet-btn">
+      <twitter-button type="share" href="http://customelements.io/" height="20" width="100" text="http://customelements.io ~ A Web Components Gallery for Modern Web Apps"></twitter-button>
+    </li>
+    <li class="fb-btn">
+      <facebook-button href="http://customelements.io/" layout="button_count" height="20" width="90"></facebook-button>
+    </li>
+    <li class="gplus-btn">
+      <gplus-one size="medium" href="http://customelements.io"></gplus-one>
+    </li>
+    <li class="gh-btn">
+      <github-button height="20" user="webcomponents" repo="customelements.io"></github-button>
+    </li>
+  </ul>
+
+  <!-- Sections -->
+  <div class="wrapper">
+    <!-- What is Web Components? -->
+    <section class="what-is-wc section">
+      <h3>What are Web Components?</h3>
+      <p>Web Components are a collection of standards which are working their way through the W3C. They enable truly encapsulated and reusable components for the web. And if you think HTML5 changed the web, wait to see what Web Components will do.</p>
+      <p>For lots more information about it, including articles and presentations, check out <a target="_blank" href="http://webcomponents.org">webcomponents.org</a>.</p>
+      <p style="float: right;">— <a target="_blank" href="http://twitter.com/zenorocha/">Zeno Rocha</a>, project lead.</p>
+    </section>
+
+    <!-- Submit your own -->
+    <section class="submit-own section">
+      <h3>Submit your own</h3>
+      <p>Got a great idea for a custom element? Awesome! There are boilerplates for <a target="_blank" href="https://github.com/webcomponents/polymer-boilerplate">Polymer</a>, <a target="_blank" href="https://github.com/webcomponents/x-tag-boilerplate">X-Tag</a>, and <a target="_blank" href="https://github.com/webcomponents/element-boilerplate">VanillaJS</a> that you can fork and get up and running with a simple component.</p>
+      <p>When you're ready to go, submit it to the form below and it'll appear on this site for others to play and use!</p>
+      <form action="" id="form-github-add">
+        <input type="text" name="repo" id="repo" placeholder="https://github.com/me/my-element" required>
+        <button class="btn">Submit</button>
+      </form>
+    </section>
+
+    <div class="row three-column">
+      <!-- Latest elements -->
+      <section class="latest-elements section">
+        <h3>Latest elements</h3>
+        <div id="latest-elements">
+          <p>Loading...</p>
+        </div>
+      </section>
+
+      <!-- Featured elements -->
+      <section class="featured-elements section">
+        <h3>Featured elements</h3>
+        <div id="featured-elements">
+          <p>Loading...</p>
+        </div>
+      </section>
+
+      <!-- Most popular elements -->
+      <section class="popular-elements section">
+        <h3>Most popular elements</h3>
+        <div id="popular-elements">
+          <p>Loading...</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- List of elements -->
+    <section class="main">
+
+      <elements></elements>
+
+      <div
+        class="pagination"
+        ng-if="pages > 1">
+        <button ng-click="pagePrev()" ng-hide="page === 1" class="btn"> Prev </button>
+        <span>{{ page }} of {{ pages }}</span>
+        <button ng-click="pageNext()" ng-hide="page === pages" class="btn"> Next </button>
+      </div>
+    </section>
+  </div>
+</main>

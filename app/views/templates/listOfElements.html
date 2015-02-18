@@ -1,0 +1,28 @@
+<table class="table">
+  <caption>
+    <input
+      ng-model="q"
+      ng-change="search()"
+      class="search input-medium search-query"
+      type="search"
+      placeholder="Search in {{ totalElements }} Elements - ex: 'package-name', OR 'keyword owner:jquery'">
+  </caption>
+  <thead>
+    <tr>
+      <th class="sort name" data-sort="name">Name</th>
+      <th class="sort desc" data-sort="desc">Description</th>
+      <th class="sort stars" data-sort="stars">Stars</th>
+      <th class="sort forks" data-sort="forks">Forks</th>
+      <th class="sort author" data-sort="author">Author</th>
+    </tr>
+  </thead>
+  <tbody class="list">
+    <tr ng-repeat="data in element">
+      <td class="name"><a href="#/about/{{data.id}}/{{data.name}}">{{ data.name }}</a></td>
+      <td class="desc">{{ data.description }}</td>
+      <td class="stars">{{ data.stars }}</td>
+      <td class="forks">{{ data.forks }}</td>
+      <td class="author"><a href="#/about/{{data.id}}/{{data.name}}">{{ data.owner }}</a></td>
+    </tr>
+  </tbody>
+</table>
